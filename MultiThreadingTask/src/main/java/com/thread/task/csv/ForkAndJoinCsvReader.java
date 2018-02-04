@@ -11,8 +11,9 @@ public class ForkAndJoinCsvReader {
 	
 	
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)  {
 		
+		try {
 		long startTime = System.currentTimeMillis();
 		
 		List<String> lines = Files.readAllLines(Paths.get("Multithreading_Task1_Books.csv"));
@@ -23,7 +24,10 @@ public class ForkAndJoinCsvReader {
 		
 		long stopTime = System.currentTimeMillis();
 		System.out.println("Processing time in milli sec : "+ (stopTime - startTime));
-		
+		}catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 		
 	}
 

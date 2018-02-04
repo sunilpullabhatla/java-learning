@@ -9,5 +9,6 @@
   <modules>
   	<module>MultiThreadingTask</module>
   	<module>RefactorCode</module>
+  	<module>Collections</module>
   </modules>
 </project>
