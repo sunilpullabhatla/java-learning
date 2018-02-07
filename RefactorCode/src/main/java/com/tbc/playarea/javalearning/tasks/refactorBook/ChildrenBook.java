@@ -1,12 +1,9 @@
 package com.tbc.playarea.javalearning.tasks.refactorBook;
 
-import java.util.Date;
 
 public class ChildrenBook extends Book{
 	
-	public ChildrenBook (final String title, final int bookCategory, final Date releaseDate) {
-		super(title, bookCategory, releaseDate);
-	}		
+		
 
 	public ChildrenBook(String title, int bookCategory) {
 		super(title, bookCategory);

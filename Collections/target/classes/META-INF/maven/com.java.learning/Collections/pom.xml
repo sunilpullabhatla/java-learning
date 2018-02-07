@@ -5,12 +5,5 @@
     <artifactId>java-learning</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>MultiThreadingTask</artifactId>
-  <dependencies>
-   <dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20180130</version>
-</dependency>
-  </dependencies>
+  <artifactId>Collections</artifactId>
 </project>

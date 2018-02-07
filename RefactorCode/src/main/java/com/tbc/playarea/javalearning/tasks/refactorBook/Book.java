@@ -14,12 +14,7 @@ public abstract class Book {
 	private String title;
 	private int bookCategory;
 
-	public Book(final String title, final int bookCategory, final Date releaseDate) {
-		super();
-		this.title = title;
-		this.bookCategory = bookCategory;
-		this.releaseDate = releaseDate;
-	}
+	
 
 	public Book(final String title, final int bookCategory) {
 		super();

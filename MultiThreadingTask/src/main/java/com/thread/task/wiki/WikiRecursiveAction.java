@@ -18,7 +18,8 @@ public class WikiRecursiveAction extends RecursiveAction {
     private static final int THRESHOLD = 1;
     private List<String> lines =  new ArrayList<String>();
     private int linesPerFile=0;
- 
+    private static final String DestDir = "/Users/sunilp/Downloads/wikiFiles/";
+    
     private static Logger logger = 
       Logger.getAnonymousLogger();
  
@@ -51,7 +52,7 @@ public class WikiRecursiveAction extends RecursiveAction {
     private void write(List<String> lines) {
     	
     	try{    
-        FileWriter fw=new FileWriter("/Users/sunilp/Downloads/wikiFiles/"+ThreadLocalRandom.current().nextLong()+".txt");    
+        FileWriter fw=new FileWriter(DestDir+ThreadLocalRandom.current().nextLong()+".txt");    
         for(String s: lines) {
         fw.write(s);
         fw.write("\n");

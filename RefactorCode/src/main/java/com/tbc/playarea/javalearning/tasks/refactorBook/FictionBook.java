@@ -1,20 +1,12 @@
 package com.tbc.playarea.javalearning.tasks.refactorBook;
 
-import java.util.Date;
-
-import com.tbc.playarea.javalearning.tasks.refactorBook.Book;
 
 public class FictionBook extends Book{
 	
 
 	private static final long serialVersionUID = 1L;
 	
-	public FictionBook (final String title, final int bookCategory, final Date releaseDate) {
-		super(title, bookCategory, releaseDate);
-	}		
-	
-
-	public FictionBook(String title, int bookCategory) {
+		public FictionBook(String title, int bookCategory) {
 		super(title, bookCategory);
 		
 	}

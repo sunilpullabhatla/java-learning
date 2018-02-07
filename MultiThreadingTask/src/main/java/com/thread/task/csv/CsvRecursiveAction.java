@@ -18,6 +18,7 @@ public class CsvRecursiveAction extends RecursiveAction {
     private static final int THRESHOLD = 10;
     private List<String> lines =  new ArrayList<String>();
     private int linesPerFile=0;
+    private static final String DestDir = "/Users/sunilp/Downloads/Files/";
  
     private static Logger logger = 
       Logger.getAnonymousLogger();
@@ -51,7 +52,7 @@ public class CsvRecursiveAction extends RecursiveAction {
     private void write(List<String> lines) {
     	
     	try{    
-        FileWriter fw=new FileWriter("/Users/sunilp/Downloads/Files/"+ThreadLocalRandom.current().nextLong()+".txt");    
+        FileWriter fw=new FileWriter(DestDir+ThreadLocalRandom.current().nextLong()+".txt");    
         for(String s: lines) {
         fw.write(s);
         fw.write("\n");
