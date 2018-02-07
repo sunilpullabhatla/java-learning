@@ -18,7 +18,7 @@ public class WikiRecursiveAction extends RecursiveAction {
     private static final int THRESHOLD = 1;
     private List<String> lines =  new ArrayList<String>();
     private int linesPerFile=0;
-    private static final String DestDir = "/Users/sunilp/Downloads/wikiFiles/";
+    private static final String DestDir = "/Users/sunilp/Downloads/wikiFiles/wiki_result";
     
     private static Logger logger = 
       Logger.getAnonymousLogger();
