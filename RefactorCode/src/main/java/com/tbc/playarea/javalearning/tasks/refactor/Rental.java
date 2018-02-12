@@ -11,7 +11,7 @@ import com.tbc.playarea.javalearning.tasks.refactorBook.BookFactory;
 /**
  * Represent a customer renting a book.
  * 
- * @author SunilP
+ * @author Sunil Pavan
  *
  */
 public class Rental implements Serializable {

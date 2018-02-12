@@ -12,7 +12,7 @@ import java.util.List;
  * Customer class that denotes customer details as well as customer related
  * operations.
  * 
- * @author SunilP
+ * @author Sunil Pavan
  *
  */
 public class Customer implements Serializable {

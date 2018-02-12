@@ -15,11 +15,19 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
+/**
+ * Perfoms word count by merging all words into single file.
+ * 
+ * @author Sunil Pavan
+ *
+ */
+
 public class WordCounter {
 	
 	public static void main(String[] args) throws IOException {
 		
 		String dir = "/Users/sunilp/Downloads/wikiFiles";
+	
 		
 		Path tempFile = Paths.get(dir+"/wiki_count/wiki_temp.txt");
 		if (Files.exists(tempFile)){
@@ -53,6 +61,7 @@ public class WordCounter {
 		            .collect(Collectors.toMap(k -> k.toLowerCase(), k -> 1, Integer::sum));
 		 
 		        Map <String, Integer > wordCounter = new TreeMap<String, Integer>(counter);
+		        
 		        String Actualfile="";
 		        for(Map.Entry<String, Integer> map : wordCounter.entrySet()){
 		        	Actualfile=Actualfile+map.getKey()+":"+map.getValue()+"\n";

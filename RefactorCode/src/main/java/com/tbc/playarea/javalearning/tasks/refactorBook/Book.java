@@ -2,6 +2,12 @@ package com.tbc.playarea.javalearning.tasks.refactorBook;
 
 import java.util.Date;
 
+/**
+ * Represent a book with all types & properties.
+ * 
+ * @author Sunil Pavan
+ *
+ */
 public abstract class Book {
 	
 	public static final int FICTION = 1;

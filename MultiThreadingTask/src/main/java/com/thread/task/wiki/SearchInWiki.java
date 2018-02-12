@@ -15,6 +15,14 @@ import java.util.regex.Pattern;
 
 import org.json.JSONObject;
 
+
+/**
+ * Performs wiki calls using executor framework.
+ * 
+ * @author Sunil Pavan
+ *
+ */
+
 public class SearchInWiki implements Callable<String> {
 
 	

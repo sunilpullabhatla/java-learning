@@ -2,6 +2,12 @@ package com.tbc.playarea.javalearning.tasks.refactorBook;
 
 import com.tbc.playarea.javalearning.tasks.refactorBook.Book;
 
+/**
+ * Book Factory creating different types of Book Instances
+ * 
+ * @author Sunil Pavan
+ *
+ */
 public class BookFactory {
 	
 	public static  Book getBookInstance(int bookCategory){

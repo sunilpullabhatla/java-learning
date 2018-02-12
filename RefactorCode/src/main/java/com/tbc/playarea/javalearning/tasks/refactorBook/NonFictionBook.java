@@ -1,6 +1,11 @@
 package com.tbc.playarea.javalearning.tasks.refactorBook;
 
-
+/**
+ * Book type of NonFiction
+ * 
+ * @author Sunil Pavan
+ *
+ */
 public class NonFictionBook extends Book {
 	
 	

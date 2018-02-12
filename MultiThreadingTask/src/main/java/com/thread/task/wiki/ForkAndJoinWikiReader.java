@@ -11,6 +11,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
+
+/**
+ * Reads the search keys given in file , Invoke wiki calls using executor framework & invoke Fork & Join by supply the result.
+ * 
+ * @author Sunil Pavan
+ *
+ */
+
+
 public class ForkAndJoinWikiReader implements Runnable{
 
 	private String fileName;

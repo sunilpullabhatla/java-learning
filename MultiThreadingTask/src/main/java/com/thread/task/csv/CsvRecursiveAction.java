@@ -8,11 +8,17 @@ import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Logger;
 
+
+/**
+ * Forking the lines of file and performs Recursive Actions 
+ * 
+ * @author Sunil Pavan
+ *
+ */
+
 public class CsvRecursiveAction extends RecursiveAction {
  
-    /**
-	 * 
-	 */
+  
 	private static final long serialVersionUID = 1L;
 	
     private static final int THRESHOLD = 10;

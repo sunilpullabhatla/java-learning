@@ -1,6 +1,11 @@
 package com.tbc.playarea.javalearning.tasks.refactorBook;
 
-
+/**
+ * Book type of Fiction
+ * 
+ * @author Sunil Pavan
+ *
+ */
 public class FictionBook extends Book{
 	
 

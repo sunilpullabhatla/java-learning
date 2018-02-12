@@ -5,11 +5,16 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 
+
+/**
+ * Invoking & Testing CSV reader using Fork & join 
+ * 
+ * @author Sunil Pavan
+ *
+ */
+
 public class ForkAndJoinCsvReader {
 
-	
-	
-	
 	
 	public static void main(String[] args)  {
 		
