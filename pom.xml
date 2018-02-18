@@ -11,6 +11,7 @@
   	<module>RefactorCode</module>
   	<module>Collections</module>
   	<module>Generics</module>
+  	<module>Annotations</module>
   </modules>
   
   <properties>
