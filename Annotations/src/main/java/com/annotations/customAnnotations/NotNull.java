@@ -11,5 +11,4 @@ import java.lang.annotation.Target;
 @Retention(RUNTIME)
 @Target(FIELD)
 public @interface NotNull {
-	boolean isMandatory() default true;
 }

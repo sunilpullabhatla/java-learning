@@ -5,6 +5,7 @@ package com.annotaions.entity;
 
 import java.util.Date;
 
+import com.annotations.customAnnotations.NotNull;
 import com.annotations.customAnnotations.Regx;
 
 /**
@@ -15,7 +16,7 @@ import com.annotations.customAnnotations.Regx;
  */
 public class Aadhar extends AbstractDocument {
 
-	@Regx(expression="^[2-9]{1}[0-9]{11}$")
+	@Regx(expression="^[2-9]{1}[0-9]{11}$" , PreValidators= {NotNull.class})
 	public String aadharNo;
 
 

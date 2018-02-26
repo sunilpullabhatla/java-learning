@@ -1,9 +1,14 @@
 package com.thread.task.csv;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.ForkJoinPool;
+
+import com.propertyloader.PropertyLoader;
 
 
 /**
@@ -18,10 +23,10 @@ public class ForkAndJoinCsvReader {
 	
 	public static void main(String[] args)  {
 		
-		try {
+		try{
 		long startTime = System.currentTimeMillis();
 		
-		List<String> lines = Files.readAllLines(Paths.get("Multithreading_Task1_Books.csv"));
+		List<String> lines = Files.readAllLines(Paths.get(PropertyLoader.prop.getProperty("fileName")));
 		
 		ForkJoinPool forkJoinPool = new ForkJoinPool(4);
 		CsvRecursiveAction csv = new CsvRecursiveAction(lines,lines.size());

@@ -3,6 +3,7 @@ package com.annotations.customAnnotations;
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
+import java.lang.annotation.Annotation;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
@@ -14,9 +15,9 @@ import java.lang.annotation.Target;
 
 public @interface Regx {
 	
-	Class[] PreValidators() default {NotNull.class};
 	
-	Length length() default @Length(min=10,max=10);
+	
+	Class<? extends Annotation>[] PreValidators() default {};
 	
 	String expression();
 	

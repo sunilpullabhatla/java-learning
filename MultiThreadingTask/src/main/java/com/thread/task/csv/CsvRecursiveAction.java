@@ -1,12 +1,16 @@
 package com.thread.task.csv;
 
+import java.io.File;
 import java.io.FileWriter;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Logger;
+
+import com.propertyloader.PropertyLoader;
 
 
 /**
@@ -22,9 +26,9 @@ public class CsvRecursiveAction extends RecursiveAction {
 	private static final long serialVersionUID = 1L;
 	
     private static final int THRESHOLD = 10;
-    private List<String> lines =  new ArrayList<String>();
+    private List<String> lines ;
     private int linesPerFile=0;
-    private static final String DestDir = "/Users/sunilp/Downloads/Files/";
+    private static final String DestDir = PropertyLoader.prop.getProperty("destDir");
  
     private static Logger logger = 
       Logger.getAnonymousLogger();
@@ -39,7 +43,13 @@ public class CsvRecursiveAction extends RecursiveAction {
         if (lines.size() > THRESHOLD) {
             ForkJoinTask.invokeAll(createSubtasks());
         } else {
-        	write(lines);
+        	
+        	File f = new File(DestDir);
+    		
+    		if(f.canWrite()) {
+    		  	write(lines);
+    		}
+      
         }
     }
  
@@ -57,14 +67,14 @@ public class CsvRecursiveAction extends RecursiveAction {
  
     private void write(List<String> lines) {
     	
-    	try{    
-        FileWriter fw=new FileWriter(DestDir+ThreadLocalRandom.current().nextLong()+".txt");    
+    	try(FileWriter fw=new FileWriter(DestDir+ThreadLocalRandom.current().nextLong()+".txt")){    
+    		    
         for(String s: lines) {
         fw.write(s);
         fw.write("\n");
         
         }
-        fw.close();    
+          
        }catch(Exception e){e.printStackTrace();}    
      }
 }

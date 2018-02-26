@@ -6,7 +6,7 @@ package com.generics.enumtask;
  * @author Sunil Pavan
  *
  */
-public enum WeekDays implements GenericEnum<String>{
+public enum WeekDays implements GenericEnum{
 	MONDAY("Monday"), 
 	TUESDAY("Tuesday"), 
 	WEDNESDAY("Wednesday"), 

@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import com.propertyloader.PropertyLoader;
+
 /**
  * AutoSuggest the given word
  * 
@@ -17,21 +19,26 @@ import java.util.concurrent.Executors;
 
 public class AutoSuggestion {
 	
-	public AutoSuggestion(String fileName) {
+	public AutoSuggestion(String splitter) {
 		super();
-		this.fileName = fileName;
+		this.splitter = splitter;
 	}
 
-	public String fileName;
-	public static final String DestDir = "/Users/sunilp/Downloads/wikiFiles/wiki_count/wordcount.txt";
+	public String splitter;
+	public static final String DestDir = PropertyLoader.prop.getProperty("wikiIndexed");
 	public static String query = "java";
 	
 	
 	
 	public static void main(String[] args) {
 		
+		AutoSuggestion as = new AutoSuggestion(":");
+		as.wordSuggest();
+	}
+	
+	public void wordSuggest() {
 		try {
-			Files.lines(Paths.get(DestDir)).filter(x -> x.split(":")[0].indexOf(query) != -1).forEach(x -> System.out.println(x.split(":")[0]));
+			Files.lines(Paths.get(DestDir)).filter(x -> x.split(splitter)[0].indexOf(query) != -1).forEach(x -> System.out.println(x.split(":")[0]));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

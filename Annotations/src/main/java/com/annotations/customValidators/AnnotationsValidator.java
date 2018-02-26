@@ -9,7 +9,7 @@ import java.util.Objects;
 import com.annotations.customAnnotations.NotNull;
 import com.annotations.customAnnotations.Regx;
 
-public class AnnotationsValidator{
+public final class AnnotationsValidator{
 
 	
 	public static void validationInSequence(Annotation annotation,Object value) {
@@ -24,13 +24,18 @@ public class AnnotationsValidator{
  			classes.add(Regx.class);
  			validateAll(regx,classes,value);
 		}
+		if(annotation instanceof NotNull) {
+			
+			boolean result = AnnotationsValidator.notNullValidator(value);
+			System.out.println("Not null Checked, Result = "+result);
+		}
 		
 	}
 	
 	public static <T extends Annotation> void validateAll(T annoInstance,List<Class> classes,Object value) {
 		
 		
-		Boolean result;
+		boolean result;
 		
 			for(Class clazz: classes ) {
 				
